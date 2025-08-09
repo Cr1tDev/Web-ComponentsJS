@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <title>Event Delegation Smooth Scroll</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: #444;
+        line-height: 1.9;
+        background-color: #f3f3f3;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
+        width: 100%;
+        padding: 0 6rem;
+        z-index: 100;
+      }
+
+      /* nav and stickly class at the same time */
+      .nav.sticky {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      .nav__logo {
+        height: 4.5rem;
+        transition: all 0.3s;
+      }
+
+      .nav__links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+
+      .nav__item {
+        margin-left: 4rem;
+      }
+
+      .nav__link:link,
+      .nav__link:visited {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s;
+      }
+
+      .nav__link--btn:link,
+      .nav__link--btn:visited {
+        padding: 0.8rem 2.5rem;
+        border-radius: 3rem;
+        background-color: var(--color-primary);
+        color: #222;
+      }
+
+      .nav__link--btn:hover,
+      .nav__link--btn:active {
+        color: inherit;
+        background-color: var(--color-primary-darker);
+        color: #333;
+      }
+
+      /* HEADER */
+      .header {
+        padding: 0 3rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid green;
+      }
+
+      .section {
+        height: 100vh;
+        width: 100%;
+        border: 1px solid black;
+      }
+      .section__description {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="Bankist logo"
+          class="nav__logo"
+          id="logo"
+        />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Operations</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Testimonials</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >Open account</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="section" id="section--1">
+      <h2 class="section__description">Features</h2>
+    </section>
+    <section class="section" id="section--2">
+      <h2 class="section__description">Operations</h2>
+    </section>
+    <section class="section" id="section--3">
+      <h2 class="section__description">Not sure yet?</h2>
+    </section>
+  </body>
+</html>
