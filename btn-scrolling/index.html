@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Button Srolling</title>
+    <script defer src="script.js"></script>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      height: 100vh;
+      border: 5px solid green;
+      text-align: center;
+      align-content: center;
+    }
+    .section {
+      height: 100vh;
+      border: 5px solid black;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <h1>Button Section Scrolling</h1>
+      <button class="btn btn--scroll-to">Learn more &DownArrow;</button>
+    </header>
+    <section section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Features</h2>
+        <h3 class="section__header">
+          Everything you need in a modern bank and more.
+        </h3>
+      </div>
+    </section>
+  </body>
+</html>
