@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hover this to run the eventlistener</h1>
+  </body>
+  <script>
+    const h1 = document.querySelector("h1");
+
+    // only run once
+    const alertHi = function (e) {
+      alert("addEventListener: Great! You are reading teh heading :D");
+
+      // remove the event
+      // h1.removeEventListener("mouseenter", alertHi);
+    };
+
+    h1.addEventListener("mouseenter", alertHi);
+
+    // remove the event within 3sec
+    setTimeout(() => h1.removeEventListener("mouseenter", alertHi), 3000);
+  </script>
+</html>
