@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* OPERATIONS */
+      .operations {
+        max-width: 100rem;
+        margin: 12rem auto 0 auto;
+
+        background-color: #fff;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--color-primary);
+        font-size: 1.6rem;
+        font-family: inherit;
+        font-weight: 500;
+        border: 1px solid black;
+        padding: 1.25rem 4.5rem;
+        border-radius: 10rem;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background-color: grey;
+      }
+
+      .operations__tab-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .operations__tab {
+        margin-right: 2.5rem;
+        transform: translateY(-50%);
+      }
+
+      .operations__tab span {
+        margin-right: 1rem;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .operations__tab--active {
+        transform: translateY(-66%);
+      }
+
+      .operations__content {
+        display: none;
+
+        /* JUST PRESENTATIONAL */
+        font-size: 1.7rem;
+        padding: 2.5rem;
+        border: 1px solid black;
+      }
+
+      .operations__content--active {
+        display: grid;
+        grid-template-columns: 7rem 1fr;
+        column-gap: 3rem;
+        row-gap: 0.5rem;
+      }
+
+      .operations__header {
+        font-size: 2.25rem;
+        font-weight: 500;
+        align-self: center;
+      }
+
+      .operations__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+      }
+
+      .operations__content--1 {
+        background-color: lightblue;
+      }
+      .operations__content--2 {
+        background-color: lightcoral;
+      }
+      .operations__content--3 {
+        background-color: lightslategray;
+      }
+
+      .operations__icon svg {
+        height: 2.75rem;
+        width: 2.75rem;
+      }
+
+      .operations__content p {
+        grid-column: 2;
+      }
+
+      .operations__icon--1 {
+        background-color: var(--color-secondary-opacity);
+      }
+      .operations__icon--2 {
+        background-color: var(--color-primary-opacity);
+      }
+      .operations__icon--3 {
+        background-color: var(--color-tertiary-opacity);
+      }
+      .operations__icon--1 svg {
+        fill: var(--color-secondary-darker);
+      }
+      .operations__icon--2 svg {
+        fill: var(--color-primary);
+      }
+      .operations__icon--3 svg {
+        fill: var(--color-tertiary);
+      }
+    </style>
+    <script defer src="script.js"></script>
+    <title>Tabbed Compoenent</title>
+  </head>
+  <body>
+    <div class="operations">
+      <div class="operations__tab-container">
+        <button
+          class="btn operations__tab operations__tab--1 operations__tab--active"
+          data-tab="1"
+        >
+          <span>01</span>Instant Transfers
+        </button>
+        <button class="btn operations__tab operations__tab--2" data-tab="2">
+          <span>02</span>Instant Loans
+        </button>
+        <button class="btn operations__tab operations__tab--3" data-tab="3">
+          <span>03</span>Instant Closing
+        </button>
+      </div>
+      <div
+        class="operations__content operations__content--1 operations__content--active"
+      >
+        <div class="operations__icon operations__icon--1">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-upload"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          Tranfser money to anyone, instantly! No fees, no BS.
+        </h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="operations__content operations__content--2">
+        <div class="operations__icon operations__icon--2">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-home"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          Buy a home or make your dreams come true, with instant loans.
+        </h5>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+      <div class="operations__content operations__content--3">
+        <div class="operations__icon operations__icon--3">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-user-x"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          No longer need your account? No problem! Close it instantly.
+        </h5>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
