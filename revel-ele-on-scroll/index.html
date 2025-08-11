@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reveal ELement on Scroll</title>
+    <script defer src="script.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: #444;
+        line-height: 1.9;
+        background-color: #f3f3f3;
+      }
+
+      .header {
+        height: 100vh;
+        text-align: center;
+        align-content: center;
+      }
+      .section {
+        padding: 15rem 3rem;
+        border-top: 1px solid #ddd;
+        height: 800px;
+        text-align: center;
+
+        transition: transform 1s, opacity 1s;
+      }
+
+      .section--hidden {
+        opacity: 0;
+        transform: translateY(8rem);
+      }
+      .footer {
+        height: 600px;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-text">
+        Reveal sections on scroll effect using obsever API
+      </h1>
+    </header>
+    <section class="section">
+      <h2 class="text-title" style="font-size: 30px">Section 2 Text Title</h2>
+      <p style="font-size: 20px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
+        iusto debitis sit placeat repellat sint? Repellat modi praesentium
+        deserunt consequatur soluta tempore qui rem similique? Modi hic minima
+        placeat ratione.
+      </p>
+    </section>
+    <section class="section">
+      <h2 class="text-title" style="font-size: 30px">Section 2 Text Title</h2>
+      <p style="font-size: 20px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
+        iusto debitis sit placeat repellat sint? Repellat modi praesentium
+        deserunt consequatur soluta tempore qui rem similique? Modi hic minima
+        placeat ratione.
+      </p>
+    </section>
+    <section class="section">
+      <h2 class="text-title" style="font-size: 30px">Section 3 Text Title</h2>
+      <p style="font-size: 20px">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
+        iusto debitis sit placeat repellat sint? Repellat modi praesentium
+        deserunt consequatur soluta tempore qui rem similique? Modi hic minima
+        placeat ratione.
+      </p>
+    </section>
+    <footer class="footer">
+      <h4>footer</h4>
+    </footer>
+  </body>
+</html>
