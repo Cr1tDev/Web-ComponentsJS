@@ -1,5 +1,8 @@
+// Asynchronous image
+
 const imageContainer = document.querySelector(".images");
 
+// Promisifying setTimeout
 const wait = function (seconds) {
   return new Promise(function (resolve) {
     setTimeout(() => {
