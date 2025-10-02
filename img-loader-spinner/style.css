@@ -1,0 +1,53 @@
+/* Main spinner container (for initial load) */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Spinner styles */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(44, 62, 80, 0.2);
+  border-top-color: #2c3e50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image loader spinner */
+.image-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ecf0f1;
+  z-index: 1;
+}
+
+.image-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border-width: 5px;
+}
+
+.card-img__recipe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
