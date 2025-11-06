@@ -1,0 +1,50 @@
+.grid-container {
+  width: 800px;
+  display: grid;
+  place-items: end;
+}
+
+.image-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.text-container {
+  background-color: antiquewhite;
+  opacity: 0.6;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+}
+
+/* SImply Grid Stacking */
+.grid-container-1 {
+  padding-top: 30px;
+  display: grid;
+  width: 700px;
+  grid-template-areas: "stack";
+  place-items: center;
+}
+
+.image-container-1 {
+  grid-area: stack;
+}
+
+.image-container-1 img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+.text-container-1 {
+  grid-area: stack;
+  background-color: burlywood;
+  opacity: 0.8;
+}

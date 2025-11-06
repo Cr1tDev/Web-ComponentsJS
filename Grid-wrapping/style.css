@@ -1,0 +1,23 @@
+.product-list {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, 300px); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 1em;
+  border: 1px solid black;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product p {
+  font-weight: 600;
+}
+
+.product img {
+  height: auto;
+  border-radius: 10px;
+}
