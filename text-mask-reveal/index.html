@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Maske-Reveal</title>
+    <style>
+      .mask-reveal {
+        display: inline-block;
+        overflow: hidden; /* mask area */
+        line-height: 1.2;
+      }
+
+      .mask-reveal span {
+        display: inline-block;
+        transform: translateY(100%); /* start below mask */
+        opacity: 0;
+        transition: transform 0.7s ease-out, opacity 0.6s ease-out;
+      }
+
+      .mask-reveal.show span {
+        transform: translateY(0); /* slide up into view */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="mask-reveal">Gallery</h2>
+    <script src="script.js"></script>
+  </body>
+</html>
